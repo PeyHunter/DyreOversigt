@@ -1,0 +1,80 @@
+:root {
+    --primary-color: #17301C;
+    --secondary-color: #e74c3c;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Degular', sans-serif;
+}
+
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+h2{
+    font-weight: 500;
+    font-size: 25px;
+
+    color: var(--primary-color);
+}
+
+.container {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.margin-box
+{
+    margin-bottom: 300px;
+}
+
+img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.animal-name
+{
+    font-weight: bold;
+    margin: 2px 2px 2px 2px;
+
+}
+p.animal-name
+{
+    margin: 2px 2px 2px 2px;
+}
+
+.picture-grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1000px) {
+
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 19px;
+    }
+
+}
