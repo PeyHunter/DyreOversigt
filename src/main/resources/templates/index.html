@@ -16,11 +16,37 @@
         <h2>Create your own Zoo:</h2>
     </div>
 
+    <form action="/add-animal" method="post">
+
+        <label for="species">Select an Animal: </label>
+        <select name="species" id="species" required>
+            <option value="Elephant"> Elephant</option>
+            <option value="Lion">Lion</option>
+            <option value="Zebra">Zebra</option>
+            <option value="Giraph">Giraffe</option>
+            <option value="Crocodile">Crocodile</option>
+            <option value="Hyena">Hyeana</option>
+        </select>
+
+        <label for="maleCount">Number of males: </label>
+        <input type="number" id="maleCount" name="maleCount" min="0" required>
+
+        <label for="femaleCount">Number of males: </label>
+        <input type="number" id="femaleCount" name="femaleCount" min="0" required>
+
+        <button type="add-animal">Add Animal</button>
+
+        >
+    </form>
+
+    <div>Here is your zoo:</div>
+
+    <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>
 
 
 
     <div>
-        <h2>Learn more about the animals before you add them: </h2>
+        <h2>Or learn more about the animals before you add them: </h2>
     </div>
 
     <div class="marginb-box"></div>
@@ -51,8 +77,8 @@
 
         <div>
             <p class="animal-name">Crocodile</p>
-             <img src="/img/large-American-alligator-Alligator-mississippiensis-in-Myakka-River-State-Park-wetland-and-marsh-Sarasota-Florida.webp"
-             alt="Crocodile">
+            <img src="/img/large-American-alligator-Alligator-mississippiensis-in-Myakka-River-State-Park-wetland-and-marsh-Sarasota-Florida.webp"
+                 alt="Crocodile">
         </div>
 
         <div>
