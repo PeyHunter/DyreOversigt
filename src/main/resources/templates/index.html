@@ -17,8 +17,9 @@
     </div>
 
     <form action="/add-animal" method="post">
+        <div class="form-row">
 
-        <label for="species">Select an Animal: </label>
+        <label class="label" for="species">Select an Animal: </label>
         <select name="species" id="species" required>
             <option value="Elephant"> Elephant</option>
             <option value="Lion">Lion</option>
@@ -31,13 +32,14 @@
         <label for="maleCount">Number of males: </label>
         <input type="number" id="maleCount" name="maleCount" min="0" required>
 
-        <label for="femaleCount">Number of males: </label>
+        <label for="femaleCount">Number of females: </label>
         <input type="number" id="femaleCount" name="femaleCount" min="0" required>
 
-        <button type="add-animal">Add Animal</button>
-
-        >
+        <button class="add-animals-btn" type="add-animal">Add Animal(s)</button>
+        </div>
     </form>
+
+
 
     <div>Here is your zoo:</div>
 

@@ -60,6 +60,47 @@ p.animal-name
 
 
 
+.label
+{
+
+}
+
+.form-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+input, select {
+    flex: 1;
+    padding: 10px;
+    width: 200px;
+    border-radius: 6px;
+    border: 0.7px solid black;
+    font-family: 'Degular', sans serif;
+    font-size: 17px;
+}
+
+.add-animals-btn {
+
+    margin: 15px auto;
+    padding: 15px 25px;
+    background-color: var(--primary-color);
+    color: white;
+    border: 0.7px solid black;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-animals-btn:hover{
+    background-color: var(--secondary-color);
+}
+
+
+
+
 
 
 
