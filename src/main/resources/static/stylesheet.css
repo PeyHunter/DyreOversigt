@@ -60,15 +60,25 @@ p.animal-name
 
 
 
-.label
-{
 
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 15px;
 }
 
-.form-container{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 10px;
+.label-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
 }
 
 input, select {

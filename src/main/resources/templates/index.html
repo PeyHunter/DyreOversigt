@@ -16,35 +16,55 @@
         <h2>Create your own Zoo:</h2>
     </div>
 
-    <form action="/add-animal" method="post">
-        <div class="form-row">
+    <form action="/addAnimal" method="post">
 
-        <label class="label" for="species">Select an Animal: </label>
-        <select name="species" id="species" required>
-            <option value="Elephant"> Elephant</option>
-            <option value="Lion">Lion</option>
-            <option value="Zebra">Zebra</option>
-            <option value="Giraph">Giraffe</option>
-            <option value="Crocodile">Crocodile</option>
-            <option value="Hyena">Hyeana</option>
-        </select>
+        <div class="animals-input-container">
+            <div class="grid-container">
 
-        <label for="maleCount">Number of males: </label>
-        <input type="number" id="maleCount" name="maleCount" min="0" required>
+                <div class="label-container">
+                    <label class="label" for="species">Select an Animal: </label>
+                    <label for="maleCount">Number of males: </label>
+                    <label for="femaleCount">Number of females: </label>
+                </div>
 
-        <label for="femaleCount">Number of females: </label>
-        <input type="number" id="femaleCount" name="femaleCount" min="0" required>
+                <div class="input-container">
+                    <select name="species" id="species" required>
+                        <option value="Elephant">Elephant</option>
+                        <option value="Lion">Lion</option>
+                        <option value="Zebra">Zebra</option>
+                        <option value="Giraph">Giraffe</option>
+                        <option value="Crocodile">Crocodile</option>
+                        <option value="Hyena">Hyeana</option>
+                    </select>
+                    <input type="number" id="maleCount" name="maleCount" min="0" required>
+                    <input type="number" id="femaleCount" name="femaleCount" min="0" required>
+                </div>
 
-        <button class="add-animals-btn" type="add-animal">Add Animal(s)</button>
+                <button class="add-animals-btn" type="submit">Add Animal(s)</button>
+            </div>
         </div>
     </form>
 
 
+    <br> <br> <br> <br>
 
-    <div>Here is your zoo:</div>
 
-    <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>
 
+    <div class="zoo-list">
+
+        <div>
+            <h2>Your Zoo has the following animals:</h2>
+            <ul>
+        <strong>Type of animal:</strong>
+                <li th:each="animal : ${animals}" th:text="${animal.species}" th:number="${animal.femaleCount}"></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+
+    <br> <br> <br> <br> <br> <br> <br> <br>
 
 
     <div>
