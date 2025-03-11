@@ -62,7 +62,7 @@
                     <div class="animal-details">
                         <p class="animal-name" th:text="${animal.species}"></p>
                         <p class="animal-count"
-                           th:text="'Males: ' + ${animal.maleCount} + ' - Females: ' + ${animal.femaleCount}"></p>
+                           th:text="'Males: ' + ${animal.maleCount} + ' Females: ' + ${animal.femaleCount}"></p>
                     </div>
 
                     <!-- <button class="edit-animal-btn" th:onclick="'/editAnimal/' + ${animal.id}">Edit</button>
@@ -98,30 +98,40 @@
 
         <div>
             <p class="animal-name">Lion</p>
+            <a href="/lion">
             <img src="/img/020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg"
                  alt="Lion">
+            </a>
         </div>
 
 
         <div>
             <p class="animal-name">Zebra</p>
+            <a href="/zebra">
             <img src="/img/download.jpeg" alt="Zebra">
+            </a>
         </div>
 
         <div>
             <p class="animal-name">Giraph</p>
+            <a href="/giraph">
             <img src="/img/giraf-b061869f78dbde917a4961ceda7c502e.jpg" alt="giraf">
+            </a>
         </div>
 
         <div>
             <p class="animal-name">Crocodile</p>
+            <a href="/crocodile">
             <img src="/img/large-American-alligator-Alligator-mississippiensis-in-Myakka-River-State-Park-wetland-and-marsh-Sarasota-Florida.webp"
                  alt="Crocodile">
+            </a>
         </div>
 
         <div>
             <p class="animal-name">Hyena</p>
+            <a href="/hyena">
             <img src="/img/Ca5c8d994b7e3c9b29d6ea3a60ac619c.webp" alt="Hyena">
+            </a>
         </div>
 
     </div>

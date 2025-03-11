@@ -58,8 +58,37 @@ public class ZooController
 
     @GetMapping("/elephant")
     public String showElephantPage() {
-        return "elephant";  // Refers to src/main/resources/templates/AnimalPages/elephant.html
+        return "elephant";
     }
+
+    @GetMapping("/crocodile")
+    public String showCrocodilePage() {
+        return "crocodile";
+    }
+
+    @GetMapping("/lion")
+    public String showLionPage() {
+        return "lion";
+    }
+
+    @GetMapping("/hyena")
+    public String showHyenaPage() {
+        return "hyena";  // Refers to src/main/resources/templates/AnimalPages/elephant.html
+    }
+
+    @GetMapping("/giraph")
+    public String showGiraphPage() {
+        return "giraph";  // Refers to src/main/resources/templates/AnimalPages/elephant.html
+    }
+
+    @GetMapping("/zebra")
+    public String showZebraPage() {
+        return "zebra";  // Refers to src/main/resources/templates/AnimalPages/elephant.html
+    }
+
+
+
+
 
 
 
