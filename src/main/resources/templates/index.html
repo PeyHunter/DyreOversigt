@@ -10,11 +10,13 @@
 <div class="container">
 
 
-    <h1>Create your own Zoo</h1>
+    <h1>Your Own Zoo</h1>
 
-    <div>
-        <h2>Create your own Zoo:</h2>
-    </div>
+
+    <div class="center-container">
+        <h2>Start by adding Animals to your Zoo: </h2>
+        <br>
+
 
     <form action="/addAnimal" method="post">
 
@@ -23,8 +25,8 @@
 
                 <div class="label-container">
                     <label class="label" for="species">Select an Animal: </label>
-                    <label for="maleCount">Number of males: </label>
-                    <label for="femaleCount">Number of females: </label>
+                    <label class="label" for="maleCount">Number of males: </label>
+                    <label class="label" for="femaleCount">Number of females: </label>
                 </div>
 
                 <div class="input-container">
@@ -39,14 +41,21 @@
                     <input type="number" id="maleCount" name="maleCount" min="0" required>
                     <input type="number" id="femaleCount" name="femaleCount" min="0" required>
                 </div>
+                <br>
 
-                <button class="add-animals-btn" type="submit">Add Animal(s)</button>
+                <div class="button-container">
+                    <button class="add-animals-btn" type="submit">Add Animal(s)</button>
+                </div>
             </div>
         </div>
     </form>
 
 
-    <br> <br> <br> <br>
+
+
+
+
+    <br> <br>
 
 
 
@@ -62,7 +71,7 @@
         </div>
 
     </div>
-
+    </div>
 
     <br> <br> <br> <br> <br> <br> <br> <br>
 

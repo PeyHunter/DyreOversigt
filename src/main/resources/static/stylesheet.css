@@ -62,11 +62,25 @@ p.animal-name
 
 
 
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+
+.animals-input-container{
+    max-width: 500px;
+    text-align: center;
+}
 
 .grid-container{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: auto 1fr;
     grid-gap: 15px;
+    justify-content: center;
 }
 
 .label-container
@@ -74,34 +88,54 @@ p.animal-name
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    text-align: right; /* Align labels to the right */
+    gap: 15px;
+
+
+}
+.label {
+    margin-bottom: 13px;
+
 }
 
 .input-container{
     display: flex;
     flex-direction: column;
+    gap: 8px;
 }
 
 input, select {
     flex: 1;
-    padding: 10px;
-    width: 200px;
+    padding: 6px;
+    width: 100%;
+    max-width: 200px;
     border-radius: 6px;
     border: 0.7px solid black;
     font-family: 'Degular', sans serif;
-    font-size: 17px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 .add-animals-btn {
-
-    margin: 15px auto;
-    padding: 15px 25px;
+    display: block;
+    margin: 12px 0 12px;
+    padding: 10px 18px;
     background-color: var(--primary-color);
     color: white;
     border: 0.7px solid black;
-    border-radius: 15px;
-    font-size: 16px;
-    font-weight: bold;
+    border-radius: 10px;
+    font-size: 14px;
+    justify-content: end;
     cursor: pointer;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Align the button to the right */
+    grid-column: 2 / 3; /* Place button in the second column */
+    width: 100%;
 }
 
 .add-animals-btn:hover{
