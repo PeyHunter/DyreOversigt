@@ -86,6 +86,12 @@ public class ZooController
         return "zebra";  // Refers to src/main/resources/templates/AnimalPages/elephant.html
     }
 
+    @PostMapping("/deleteAnimal")
+    public String deleteAnimal(@RequestParam String species, Model model) {
+        zoo.deleteAnimal(species);
+        model.addAttribute("animals", zoo.getAnimals());
+        return "redirect:/";
+    }
 
 
 

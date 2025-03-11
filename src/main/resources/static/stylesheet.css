@@ -175,6 +175,10 @@ input, select {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center content horizontally */
+    position: relative;  /* Allow button to be placed inside flex container */
 }
 
 .animal-details {
@@ -200,6 +204,19 @@ input, select {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two equal columns */
     gap: 20px; /* Space between columns */
+}
+
+.delete-animal-btn {
+    margin-top: 10px;
+    padding: 6px 10px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: 0.7px solid black;
+    border-radius: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    width: auto;  /* Keep width according to content */
+    text-align: center;
 }
 
 
