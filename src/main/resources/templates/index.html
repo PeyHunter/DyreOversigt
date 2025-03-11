@@ -18,62 +18,66 @@
         <br>
 
 
-    <form action="/addAnimal" method="post">
+        <form action="/addAnimal" method="post">
 
-        <div class="animals-input-container">
-            <div class="grid-container">
+            <div class="animals-input-container">
+                <div class="grid-container">
 
-                <div class="label-container">
-                    <label class="label" for="species">Select an Animal: </label>
-                    <label class="label" for="maleCount">Number of males: </label>
-                    <label class="label" for="femaleCount">Number of females: </label>
-                </div>
+                    <div class="label-container">
+                        <label class="label" for="species">Select an Animal: </label>
+                        <label class="label" for="maleCount">Number of males: </label>
+                        <label class="label" for="femaleCount">Number of females: </label>
+                    </div>
 
-                <div class="input-container">
-                    <select name="species" id="species" required>
-                        <option value="Elephant">Elephant</option>
-                        <option value="Lion">Lion</option>
-                        <option value="Zebra">Zebra</option>
-                        <option value="Giraph">Giraffe</option>
-                        <option value="Crocodile">Crocodile</option>
-                        <option value="Hyena">Hyeana</option>
-                    </select>
-                    <input type="number" id="maleCount" name="maleCount" min="0" required>
-                    <input type="number" id="femaleCount" name="femaleCount" min="0" required>
-                </div>
-                <br>
+                    <div class="input-container">
+                        <select name="species" id="species" required>
+                            <option value="Elephant">Elephant</option>
+                            <option value="Lion">Lion</option>
+                            <option value="Zebra">Zebra</option>
+                            <option value="Giraph">Giraffe</option>
+                            <option value="Crocodile">Crocodile</option>
+                            <option value="Hyena">Hyeana</option>
+                        </select>
+                        <input type="number" id="maleCount" name="maleCount" min="0" required>
+                        <input type="number" id="femaleCount" name="femaleCount" min="0" required>
+                    </div>
+                    <br>
 
-                <div class="button-container">
-                    <button class="add-animals-btn" type="submit">Add Animal(s)</button>
+                    <div class="button-container">
+                        <button class="add-animals-btn" type="submit">Add Animal(s)</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
 
 
+        <br>
 
 
-
-
-    <br> <br>
-
-
-
-    <div class="zoo-list">
-
-        <div>
+        <div class="zoo-list">
             <h2>Your Zoo has the following animals:</h2>
-            <ul>
-        <strong>Type of animal:</strong>
-                <li th:each="animal : ${animals}" th:text="${animal.species}" th:number="${animal.femaleCount}"></li>
+            <div class="animal-cards-container">
+                <div class="animal-card" th:each="animal : ${animals}">
 
-            </ul>
+                    <div class="animal-details">
+                        <p class="animal-name" th:text="${animal.species}"></p>
+                        <p class="animal-count"
+                           th:text="'Males: ' + ${animal.maleCount} + ' - Females: ' + ${animal.femaleCount}"></p>
+                    </div>
+
+                    <!-- <button class="edit-animal-btn" th:onclick="'/editAnimal/' + ${animal.id}">Edit</button>
+                     <button class="delete-animal-btn" th:onclick="'/deleteAnimal/' + ${animal.id}">Delete</button>
+                     -->
+
+                </div>
+            </div>
+
+
         </div>
-
-    </div>
     </div>
 
-    <br> <br> <br> <br> <br> <br> <br> <br>
+
+    <br> <br> <br> <br> <br>
 
 
     <div>
@@ -85,8 +89,11 @@
     <div class="picture-grid">
 
         <div>
+
             <p class="animal-name">Elephant</p>
+            <a href="/elephant">
             <img src="/img/el2.avif" alt="Elephant">
+            </a>
         </div>
 
         <div>

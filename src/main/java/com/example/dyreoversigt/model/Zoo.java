@@ -17,6 +17,10 @@ public class Zoo
         return animals;
     }
 
+    public void removeAnimalBySpecies(String species) {
+        animals.removeIf(animal -> animal.getSpecies().equals(species));
+    }
+
 
 
 

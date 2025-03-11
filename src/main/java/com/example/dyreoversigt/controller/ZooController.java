@@ -15,8 +15,8 @@ public class ZooController
     @GetMapping("/")
     public String showZoo(Model model)
     {
-        model.addAttribute("zoo", zoo);
-        return "/index.html";
+        model.addAttribute("animals", zoo.getAnimals());
+        return "/index";
     }
 
     @PostMapping("/addAnimal")
@@ -53,8 +53,18 @@ public class ZooController
         zoo.addAnimals(animal);
         model.addAttribute("animal", animal);
         model.addAttribute("animals", zoo.getAnimals());
-        return "index";
+        return "redirect:/";
     }
+
+    @GetMapping("/elephant")
+    public String showElephantPage() {
+        return "elephant";  // Refers to src/main/resources/templates/AnimalPages/elephant.html
+    }
+
+
+
 }
+
+
 
 
