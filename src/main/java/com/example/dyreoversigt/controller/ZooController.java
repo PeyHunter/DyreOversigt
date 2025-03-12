@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class ZooController
 {
-    private Zoo zoo = new Zoo();
+    private Zoo zoo = new Zoo(); //opretter en instans af zoo, som kan bruges i controlleren
 
     @GetMapping("/")
     public String showZoo(Model model)
@@ -19,7 +19,7 @@ public class ZooController
         return "/index";
     }
 
-    @PostMapping("/addAnimal")
+    @PostMapping("/addAnimal") //her er controlleren til at adde dyr!
     public String addAnimal(@RequestParam String species,
                             @RequestParam int maleCount,
                             @RequestParam int femaleCount,
@@ -92,12 +92,6 @@ public class ZooController
         model.addAttribute("animals", zoo.getAnimals());
         return "redirect:/";
     }
-
-
-
-
-
-
 }
 
 

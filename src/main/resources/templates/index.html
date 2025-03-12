@@ -7,8 +7,7 @@
 </head>
 <body>
 
-<div class="container">
-
+<div class="container"> <!-- wrapper omkring alt indhold-->
 
     <h1>Create your own Zoo</h1>
 
@@ -18,7 +17,7 @@
         <br>
 
 
-        <form action="/addAnimal" method="post">
+        <form action="/addAnimal" method="post"> <!-- here is the command to the controller-->
 
             <div class="animals-input-container">
                 <div class="grid-container">
@@ -58,18 +57,18 @@
         <div class="zoo-list">
             <h2>Your Zoo has the following animals:</h2>
             <div class="animal-cards-container">
-                <div class="animal-card" th:each="animal : ${animals}">
+                <div class="animal-card" th:each="animal : ${animals}"> <!-- for loop, som kører og adder de forskellige dyr-->
 
                     <div class="animal-details">
                         <p class="animal-name" th:text="${animal.species}"></p>
                         <p class="animal-count"
                            th:text="'Males: ' + ${animal.maleCount} + ' Females: ' + ${animal.femaleCount}"></p>
                     </div>
-                    <form action="/deleteAnimal" method="post" style="display:inline;">
+                    <form action="/deleteAnimal" method="post" style="display:inline;">  <!-- igen det er her man linker til controlleren, som sletter dyr-->
                         <input type="hidden" name="species" th:value="${animal.species}" />
                         <button type="submit" class="delete-animal-btn" >Delete</button>
                     </form>
-
+                    
                 </div>
             </div>
 
